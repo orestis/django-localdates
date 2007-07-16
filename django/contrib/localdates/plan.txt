@@ -1,0 +1,6 @@
+#summary Plan of the localdates project
+
+ * find out how to mark date format strings as translatable
+ * find out how to get the locale for each request
+ * *DONE* find out how to import a different local dateformat for each request
+ * *DONE* Create a new LocalDateFormat the subclasses DateFormat

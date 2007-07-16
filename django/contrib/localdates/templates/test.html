@@ -1,0 +1,27 @@
+{% load local_datefilter %}
+{{ request.LANGUAGE_CODE }}
+d F Y:
+{{ datenow|date:"d F Y" }} 
+<hr>
+
+d {Fp} Y:
+{{ datenow|ldate:"d {Fp} Y" }} 
+<br>
+{FULL_DATE}
+{{ datenow|ldate:"{FULL_DATE}" }} 
+<br>
+{FULL_DATETIME}
+{{ datenow|ldate:"{FULL_DATETIME}" }} 
+<br>
+{ABBR_DATE}
+{{ datenow|ldate:"{ABBR_DATE}" }} 
+<br>
+{ABBR_DATETIME}
+{{ datenow|ldate:"{ABBR_DATETIME}" }} 
+<br>
+{NUM_DATE}
+{{ datenow|ldate:"{NUM_DATE}" }} 
+<br>
+
+
+{% now "d F Y" %}
