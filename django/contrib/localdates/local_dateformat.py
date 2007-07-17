@@ -95,12 +95,12 @@ class LocalFormatter(object):
 class DefaultLocalDateFormat(LocalFormatter, DateFormat):
     def __init__(self, *args, **kwargs):
         self._format = DateFormat.format
-        super(DateFormat, self).__init__(*args, **kwargs)
+        super(DefaultLocalDateFormat, self).__init__(*args, **kwargs)
     
 class DefaultLocalTimeFormat(LocalFormatter, TimeFormat):
     def __init__(self, *args, **kwargs):
         self._format = TimeFormat.format
-        super(TimeFormat, self).__init__(*args, **kwargs)
+        super(DefaultLocalTimeFormat, self).__init__(*args, **kwargs)
     
 def _format(value, format_string, locale, format_type='Date'):
     "Convenience function"  
@@ -119,9 +119,9 @@ def _format(value, format_string, locale, format_type='Date'):
         except (ImportError, AttributeError), e:
             #print 'could not import localflavor module', e
             #use DefaultLocalDateFormat or DefaultLocalTimeFormat
-            if format_type=='Date' 
+            if format_type=='Date':
                 df = DefaultLocalDateFormat(value)
-            elif format_type=='Time'
+            elif format_type=='Time':
                 df = DefaultLocalTimeFormat(value)
         
 
@@ -131,5 +131,5 @@ def _format(value, format_string, locale, format_type='Date'):
 def format(value, format_string, locale=None):
     return _format(value, format_string, locale, 'Date')
 
-def time_format(value, format_string):   
+def time_format(value, format_string, locale=None):   
     return _format(value, format_string, locale, 'Time')

@@ -1,12 +1,8 @@
 from django.template import resolve_variable, Library
 from django.conf import settings
 from django.utils.translation import gettext, ngettext, get_language
-import re
-import random as random_module
 
 register = Library()
-
-
 
 from django.contrib.localdates.local_dateformat import format, time_format
 
