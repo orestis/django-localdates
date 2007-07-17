@@ -9,11 +9,13 @@ local_re = re.compile(r'(\{\w{2}\})')
 #to trigger translation    
 dummy_formats = (
     _('FULL_DATE'), 
-    _('ABBR_DATE'), 
+    _('ABBR_DATE'),
+    _('ABBR2_DATE'), 
     _('NUM_DATE'), 
    
     _('FULL_DATETIME'), 
     _('ABBR_DATETIME'),
+    _('ABBR2_DATETIME'),
     _('NUM_DATETIME'),
     
     _('FULL_TIME'),
@@ -30,11 +32,13 @@ dummy_formats = (
 # default to english
 default_format_strings = {
     'FULL_DATE':'l, N j, Y',
-    'ABBR_DATE':'N j, Y',
+    'ABBR_DATE':'F j, Y',
+    'ABBR2_DATE':'M j, Y',
     'NUM_DATE':'n/j/Y',
 
     'FULL_DATETIME':'l, N j, Y, P',
-    'ABBR_DATETIME':'N j, Y, P',
+    'ABBR_DATETIME':'F j, Y, P',
+    'ABBR2_DATETIME':'M j, Y, P',    
     'NUM_DATETIME':'n/j/Y, P',
     
     'FULL_TIME':'P',
@@ -70,8 +74,16 @@ local_standard_string = r'('+(r'|'.join([r'\{%s\}'%key for key in get_local_form
 
 local_standard_re = re.compile(local_standard_string)
 
+local_trans_re = re.compile(r'(\{_\(.+?\)\})')
+
 class LocalFormatter(object):
     def format(self, formatstr):
+        # replace the translated strings
+        trans_pieces = local_trans_re.findall(formatstr)
+        for piece in trans_pieces:
+            result = _(piece[3:-2])
+            formatstr = formatstr.replace(piece, result)
+
         # replace the standard strings with their expanded versions
         standard_pieces = local_standard_re.findall(formatstr)
         for piece in standard_pieces:
@@ -87,6 +99,8 @@ class LocalFormatter(object):
                 # the current local date format doesn't handle this format
                 # we don't do anything
                 pass
+        
+        
         
         # use the standard behavior for the rest
         return self._format(self, formatstr)

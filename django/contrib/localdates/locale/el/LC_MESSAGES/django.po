@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-17 13:14+0300\n"
+"POT-Creation-Date: 2007-07-17 22:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,54 +16,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\local_dateformat.py:34
+#: .\local_dateformat.py:11
 msgid "FULL_DATE"
 msgstr "l, j {Fp}, Y"
 
-#: .\local_dateformat.py:35
+#: .\local_dateformat.py:12
 msgid "ABBR_DATE"
+msgstr "j {Fp}, Y"
+
+#: .\local_dateformat.py:13
+msgid "ABBR2_DATE"
 msgstr "j M, Y"
 
-#: .\local_dateformat.py:36
+#: .\local_dateformat.py:14
 msgid "NUM_DATE"
 msgstr "j/n/Y"
 
-#: .\local_dateformat.py:38
+#: .\local_dateformat.py:16
 msgid "FULL_DATETIME"
 msgstr "l, j {Fp}, Y, P"
 
-#: .\local_dateformat.py:39
+#: .\local_dateformat.py:17
 msgid "ABBR_DATETIME"
+msgstr "j {Fp}, Y, P"
+
+#: .\local_dateformat.py:18
+msgid "ABBR2_DATETIME"
 msgstr "j M, Y, P"
 
-#: .\local_dateformat.py:40
+#: .\local_dateformat.py:19
 msgid "NUM_DATETIME"
 msgstr "j/n/Y, P"
 
-#: .\local_dateformat.py:42
+#: .\local_dateformat.py:21
 msgid "FULL_TIME"
 msgstr "P"
 
-#: .\local_dateformat.py:44
+#: .\local_dateformat.py:23
 msgid "FULL_YEARMONTH"
 msgstr "F Y"
 
-#: .\local_dateformat.py:45
+#: .\local_dateformat.py:24
 msgid "ABBR_YEARMONTH"
 msgstr "M Y"
 
-#: .\local_dateformat.py:46
+#: .\local_dateformat.py:25
 msgid "NUM_YEARMONTH"
 msgstr "n/Y"
 
-#: .\local_dateformat.py:48
+#: .\local_dateformat.py:27
 msgid "FULL_MONTHDAY"
 msgstr "j {Fp}"
 
-#: .\local_dateformat.py:49
+#: .\local_dateformat.py:28
 msgid "ABBR_MONTHDAY"
 msgstr "j M"
 
-#: .\local_dateformat.py:50
+#: .\local_dateformat.py:29
 msgid "NUM_MONTHDAY"
 msgstr "j/n"
