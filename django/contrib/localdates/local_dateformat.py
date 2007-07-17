@@ -50,14 +50,15 @@ dummy_formats = (
     _('NUM_MONTHDAY'),
     )
 
+# default to english
 default_format_strings = {
-    'FULL_DATE':'l, j {Fp}, Y',
-    'ABBR_DATE':'j M, Y',
-    'NUM_DATE':'j/n/Y',
+    'FULL_DATE':'l, N j, Y',
+    'ABBR_DATE':'N j, Y',
+    'NUM_DATE':'n/j/Y',
     #fix this
-    'FULL_DATETIME':'l, j {Fp}, Y, P',
-    'ABBR_DATETIME':'j M, Y, P',
-    'NUM_DATETIME':'j/n/Y, P',
+    'FULL_DATETIME':'l, N j, Y, P',
+    'ABBR_DATETIME':'N j, Y, P',
+    'NUM_DATETIME':'n/j/Y, P',
     
     'FULL_TIME':'P',
     
@@ -65,9 +66,9 @@ default_format_strings = {
     'ABBR_YEARMONTH':'M Y',
     'NUM_YEARMONTH':'n/Y',
     
-    'FULL_MONTHDAY':'j {Fp}',
-    'ABBR_MONTHDAY':'j M',
-    'NUM_MONTHDAY':'j/n',
+    'FULL_MONTHDAY':'F j',
+    'ABBR_MONTHDAY':'M j',
+    'NUM_MONTHDAY':'n/j',
 
 }
 
