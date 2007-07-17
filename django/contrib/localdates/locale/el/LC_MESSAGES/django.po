@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-07-17 13:14+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\local_dateformat.py:34
+msgid "FULL_DATE"
+msgstr "l, j {Fp}, Y"
+
+#: .\local_dateformat.py:35
+msgid "ABBR_DATE"
+msgstr "j M, Y"
+
+#: .\local_dateformat.py:36
+msgid "NUM_DATE"
+msgstr "j/n/Y"
+
+#: .\local_dateformat.py:38
+msgid "FULL_DATETIME"
+msgstr "l, j {Fp}, Y, P"
+
+#: .\local_dateformat.py:39
+msgid "ABBR_DATETIME"
+msgstr "j M, Y, P"
+
+#: .\local_dateformat.py:40
+msgid "NUM_DATETIME"
+msgstr "j/n/Y, P"
+
+#: .\local_dateformat.py:42
+msgid "FULL_TIME"
+msgstr "P"
+
+#: .\local_dateformat.py:44
+msgid "FULL_YEARMONTH"
+msgstr "F Y"
+
+#: .\local_dateformat.py:45
+msgid "ABBR_YEARMONTH"
+msgstr "M Y"
+
+#: .\local_dateformat.py:46
+msgid "NUM_YEARMONTH"
+msgstr "n/Y"
+
+#: .\local_dateformat.py:48
+msgid "FULL_MONTHDAY"
+msgstr "j {Fp}"
+
+#: .\local_dateformat.py:49
+msgid "ABBR_MONTHDAY"
+msgstr "j M"
+
+#: .\local_dateformat.py:50
+msgid "NUM_MONTHDAY"
+msgstr "j/n"
