@@ -4,30 +4,7 @@ from django.utils.dateformat import TimeFormat, DateFormat
 from django.utils.translation import ugettext as _
 import re
 
-
 local_re = re.compile(r'(\{\w{2}\})')
-
-
-
-local_formats = (
-    'FULL_DATE', 
-    'ABBR_DATE', 
-    'NUM_DATE', 
-    
-    'FULL_DATETIME', 
-    'ABBR_DATETIME',
-    'NUM_DATETIME',
-    
-    'FULL_TIME',
-    
-    'FULL_YEARMONTH',
-    'ABBR_YEARMONTH',
-    'NUM_YEARMONTH',
-    
-    'FULL_MONTHDAY',
-    'ABBR_MONTHDAY',
-    'NUM_MONTHDAY',
-    )
 
 #to trigger translation    
 dummy_formats = (
@@ -55,7 +32,7 @@ default_format_strings = {
     'FULL_DATE':'l, N j, Y',
     'ABBR_DATE':'N j, Y',
     'NUM_DATE':'n/j/Y',
-    #fix this
+
     'FULL_DATETIME':'l, N j, Y, P',
     'ABBR_DATETIME':'N j, Y, P',
     'NUM_DATETIME':'n/j/Y, P',
@@ -79,28 +56,26 @@ def get_local_formats():
     from django.conf import settings
     formats = {}
     
-    for format in defaul_format_strings:
-        result = ugettext(format)
+    for format in default_format_strings:
+        result = _(format)
         if result == format:
-            result = default_format_string[format]
+            result = default_format_strings[format]
         formats[format]=result
     
     return formats
 
 
-#this construcs the regexp string like this: r"(\{FULL_DATE\}|\{ABBR_DATE\}|...)"
+#this constructs the regexp string like this: r"(\{FULL_DATE\}|\{ABBR_DATE\}|...)"
 local_standard_string = r'('+(r'|'.join([r'\{%s\}'%key for key in get_local_formats()]))+r')'
 
 local_standard_re = re.compile(local_standard_string)
 
 class LocalFormatter(object):
     def format(self, formatstr):
-    
-        #formatstr = unicode(formatstr)
         # replace the standard strings with their expanded versions
         standard_pieces = local_standard_re.findall(formatstr)
         for piece in standard_pieces:
-            formatstr = formatstr.replace(piece, get_local_formats[piece[1:-1]])
+            formatstr = formatstr.replace(piece, get_local_formats()[piece[1:-1]])
         
         # put the local values in the format str
         local_pieces = local_re.findall(formatstr)
@@ -117,20 +92,18 @@ class LocalFormatter(object):
         return self._format(self, formatstr)
 
 
-class LocalDateFormat(LocalFormatter, DateFormat):
+class DefaultLocalDateFormat(LocalFormatter, DateFormat):
     def __init__(self, *args, **kwargs):
         self._format = DateFormat.format
         super(DateFormat, self).__init__(*args, **kwargs)
     
-class LocalTimeFormat(LocalFormatter, TimeFormat):
+class DefaultLocalTimeFormat(LocalFormatter, TimeFormat):
     def __init__(self, *args, **kwargs):
         self._format = TimeFormat.format
         super(TimeFormat, self).__init__(*args, **kwargs)
     
-    
-    
-def format(value, format_string, locale=None):
-    "Convenience function"
+def _format(value, format_string, locale, format_type='Date'):
+    "Convenience function"  
     if locale == None:
         df = DateFormat(value)
     else:
@@ -139,19 +112,24 @@ def format(value, format_string, locale=None):
         try:
             localflavor_module = __import__('django.contrib.localflavor.%s.dateformat'%locale[:2], {}, {}, [''])
             #print localflavor_module
-            df_class = getattr(localflavor_module, 'LocalDateFormat')
+            df_class = getattr(localflavor_module, 'Local%sFormat'%format_type)
             #print df_class
             df = df_class(value)
+            
         except (ImportError, AttributeError), e:
             #print 'could not import localflavor module', e
-            # for now, we just use the custom LocalDateFormat described above
-            df = LocalDateFormat(value)
+            #use DefaultLocalDateFormat or DefaultLocalTimeFormat
+            if format_type=='Date' 
+                df = DefaultLocalDateFormat(value)
+            elif format_type=='Time'
+                df = DefaultLocalTimeFormat(value)
         
 
         
     return df.format(format_string)
 
-def time_format(value, format_string):
-    "Convenience function"
-    tf = TimeFormat(value)
-    return tf.format(format_string)
+def format(value, format_string, locale=None):
+    return _format(value, format_string, locale, 'Date')
+
+def time_format(value, format_string):   
+    return _format(value, format_string, locale, 'Time')

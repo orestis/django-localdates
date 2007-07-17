@@ -1,23 +1,18 @@
 from django.template import resolve_variable, Library
 from django.conf import settings
-from django.utils.translation import gettext, ngettext
+from django.utils.translation import gettext, ngettext, get_language
 import re
 import random as random_module
 
 register = Library()
 
-from django.contrib.localdates.local_dateformat import format
 
 
-def get_locale():
-    return 'el_GR'
+from django.contrib.localdates.local_dateformat import format, time_format
 
 ###################
 # DATES           #
 ###################
-
-# TODO: can I get the current request locale in someway ? Maybe using thread locals ? 
-# Probably a middleware should be used to place the locale in a threadlocal.
 
 def ldate(value, arg=None):
     "Formats a date according to the given format"
@@ -25,16 +20,16 @@ def ldate(value, arg=None):
         return ''
     if arg is None:
         arg = settings.DATE_FORMAT
-    return format(value, arg, get_locale())
+    return format(value, arg, get_language())
 
+# below here nothing works
 def ltime(value, arg=None):
-    "Formats a time according to the given format"
-    from django.utils.dateformat import time_format
+    "Formats a time according to the given format"   
     if value in (None, ''):
         return ''
     if arg is None:
         arg = settings.TIME_FORMAT
-    return time_format(value, arg)
+    return time_format(value, arg, get_language())
 
 def ltimesince(value, arg=None):
     'Formats a date as the time since that date (i.e. "4 days, 6 hours")'
