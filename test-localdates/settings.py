@@ -72,6 +72,7 @@ ROOT_URLCONF = 'test-localdates.urls'
 
 INSTALLED_APPS = (
     'test-localdates.example',
+    #make sure this points to the localdates package
     'django.contrib.localdates'
 )
 
