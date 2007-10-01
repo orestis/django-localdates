@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-17 22:11+0300\n"
+"POT-Creation-Date: 2007-10-02 00:22+0300\n"
 "PO-Revision-Date: 2007-09-30 17:57+0300\n"
 "Last-Translator: Antti Kaihola <akaihol+django@ambitone.com>\n"
 "Language-Team: Finnish <Django-I18N@googlegroups.com>\n"
@@ -15,62 +15,158 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\local_dateformat.py:11
+#: local_dateformat.py:11
 msgid "FULL_DATE"
 msgstr "l, j. {Fp} Y"
 
-#: .\local_dateformat.py:12
+#: local_dateformat.py:12
 msgid "ABBR_DATE"
 msgstr "j. {Fp} Y"
 
-#: .\local_dateformat.py:13
+#: local_dateformat.py:13
 msgid "ABBR2_DATE"
 msgstr "j. M Y"
 
-#: .\local_dateformat.py:14
+#: local_dateformat.py:14
 msgid "NUM_DATE"
 msgstr "j.n.Y"
 
-#: .\local_dateformat.py:16
+#: local_dateformat.py:16
 msgid "FULL_DATETIME"
 msgstr "l, j. {Fp} Y, P"
 
-#: .\local_dateformat.py:17
+#: local_dateformat.py:17
 msgid "ABBR_DATETIME"
 msgstr "j. {Fp} Y, P"
 
-#: .\local_dateformat.py:18
+#: local_dateformat.py:18
 msgid "ABBR2_DATETIME"
 msgstr "j. M Y, P"
 
-#: .\local_dateformat.py:19
+#: local_dateformat.py:19
 msgid "NUM_DATETIME"
 msgstr "j.n.Y, P"
 
-#: .\local_dateformat.py:21
+#: local_dateformat.py:21
 msgid "FULL_TIME"
 msgstr "P"
 
-#: .\local_dateformat.py:23
+#: local_dateformat.py:23
 msgid "FULL_YEARMONTH"
 msgstr "F Y"
 
-#: .\local_dateformat.py:24
+#: local_dateformat.py:24
 msgid "ABBR_YEARMONTH"
 msgstr "M Y"
 
-#: .\local_dateformat.py:25
+#: local_dateformat.py:25
 msgid "NUM_YEARMONTH"
 msgstr "n/Y"
 
-#: .\local_dateformat.py:27
+#: local_dateformat.py:27
 msgid "FULL_MONTHDAY"
 msgstr "j. {Fp}"
 
-#: .\local_dateformat.py:28
+#: local_dateformat.py:28
 msgid "ABBR_MONTHDAY"
 msgstr "j. M"
 
-#: .\local_dateformat.py:29
+#: local_dateformat.py:29
 msgid "NUM_MONTHDAY"
 msgstr "j.n."
+
+#: local_dates.py:21
+msgid "January_POS"
+msgstr "tammikuuta"
+
+#: local_dates.py:21
+msgid "February_POS"
+msgstr "helmikuuta"
+
+#: local_dates.py:21
+msgid "March_POS"
+msgstr "maaliskuuta"
+
+#: local_dates.py:21
+msgid "April_POS"
+msgstr "huhtikuuta"
+
+#: local_dates.py:22
+msgid "May_POS"
+msgstr "toukokuuta"
+
+#: local_dates.py:22
+msgid "June_POS"
+msgstr "kesäkuuta"
+
+#: local_dates.py:22
+msgid "July_POS"
+msgstr "heinäkuuta"
+
+#: local_dates.py:22
+msgid "August_POS"
+msgstr "elokuuta"
+
+#: local_dates.py:23
+msgid "September_POS"
+msgstr "syyskuuta"
+
+#: local_dates.py:23
+msgid "October_POS"
+msgstr "lokakuuta"
+
+#: local_dates.py:23
+msgid "November_POS"
+msgstr "marraskuuta"
+
+#: local_dates.py:24
+msgid "December_POS"
+msgstr "joulukuuta"
+
+#: local_dates.py:33
+msgid "January_DIR"
+msgstr "tammikuussa"
+
+#: local_dates.py:33
+msgid "February_DIR"
+msgstr "helmikuussa"
+
+#: local_dates.py:33
+msgid "March_DIR"
+msgstr "maaliskuussa"
+
+#: local_dates.py:33
+msgid "April_DIR"
+msgstr "huhtikuussa"
+
+#: local_dates.py:34
+msgid "May_DIR"
+msgstr "toukokuussa"
+
+#: local_dates.py:34
+msgid "June_DIR"
+msgstr "kesäkuussa"
+
+#: local_dates.py:34
+msgid "July_DIR"
+msgstr "heinäkuussa"
+
+#: local_dates.py:34
+msgid "August_DIR"
+msgstr "elokuussa"
+
+#: local_dates.py:35
+msgid "September_DIR"
+msgstr "syyskuussa"
+
+#: local_dates.py:35
+msgid "October_DIR"
+msgstr "lokakuussa"
+
+#: local_dates.py:35
+msgid "November_DIR"
+msgstr "marraskuussa"
+
+#: local_dates.py:36
+msgid "December_DIR"
+msgstr "joulukuussa"

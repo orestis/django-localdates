@@ -18,7 +18,7 @@ def ldate(value, arg=None):
         arg = settings.DATE_FORMAT
     return format(value, arg, get_language())
 
-# below here nothing works
+
 def ltime(value, arg=None):
     "Formats a time according to the given format"   
     if value in (None, ''):
@@ -27,6 +27,7 @@ def ltime(value, arg=None):
         arg = settings.TIME_FORMAT
     return time_format(value, arg, get_language())
 
+# below here nothing works
 def ltimesince(value, arg=None):
     'Formats a date as the time since that date (i.e. "4 days, 6 hours")'
     from django.utils.timesince import timesince

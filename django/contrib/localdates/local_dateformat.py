@@ -105,11 +105,18 @@ class LocalFormatter(object):
         # use the standard behavior for the rest
         return self._format(self, formatstr)
 
-
+from local_dates import MONTHS_POS, MONTHS_DIR
 class DefaultLocalDateFormat(LocalFormatter, DateFormat):
     def __init__(self, *args, **kwargs):
         self._format = DateFormat.format
         super(DefaultLocalDateFormat, self).__init__(*args, **kwargs)
+
+    
+    def Fp(self):
+        return MONTHS_POS[self.data.month]
+
+    def Fd(self):
+        return MONTHS_DIR[self.data.month]
     
 class DefaultLocalTimeFormat(LocalFormatter, TimeFormat):
     def __init__(self, *args, **kwargs):
