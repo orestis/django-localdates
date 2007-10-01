@@ -1,0 +1,38 @@
+{% load local_datefilter %}
+language code:
+{{ request.LANGUAGE_CODE }} <br>
+d F Y:
+{{ datenow|date:"d F Y" }} 
+<hr>
+This is not safe to use:<br>
+d {Fp} Y:
+{{ datenow|ldate:"d {Fp} Y" }}
+Use these instead:<br> 
+<br>
+{FULL_DATE}
+{{ datenow|ldate:"{FULL_DATE}" }} 
+<br>
+{FULL_DATETIME}
+{{ datenow|ldate:"{FULL_DATETIME}" }} 
+<br>
+{ABBR_DATE}
+{{ datenow|ldate:"{ABBR_DATE}" }} 
+<br>
+{ABBR_DATETIME}
+{{ datenow|ldate:"{ABBR_DATETIME}" }} 
+<br>
+{NUM_DATE}
+{{ datenow|ldate:"{NUM_DATE}" }} 
+<br>
+<hr>
+ltime:"{FULL_TIME}"
+{{datenow|ltime:"{FULL_TIME}"}}
+<hr>
+Example of translated date format: <br>
+"\T\h\i\s \i\s: {_(MY_DATE)} - {FULL_DATE}"<br>
+{_(MY_DATE)} is actually in this example application:<br>
+{{datenow|ldate:"\T\h\i\s \i\s: {_(MY_DATE)} - {FULL_DATE}"}}
+
+<hr>
+
+{% now "d F Y" %}
