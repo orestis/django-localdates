@@ -1,4 +1,6 @@
 {% load local_datefilter %}
+Change the preffered languages and reload this page to see how it works!<br>
+<hr>
 language code:
 {{ request.LANGUAGE_CODE }} <br>
 d F Y:
@@ -30,7 +32,7 @@ ltime:"{FULL_TIME}"
 <hr>
 Example of translated date format: <br>
 "\T\h\i\s \i\s: {_(MY_DATE)} - {FULL_DATE}"<br>
-{_(MY_DATE)} is actually in this example application:<br>
+{_(MY_DATE)} is actually defined in this example application, only in English:<br>
 {{datenow|ldate:"\T\h\i\s \i\s: {_(MY_DATE)} - {FULL_DATE}"}}
 
 <hr>
