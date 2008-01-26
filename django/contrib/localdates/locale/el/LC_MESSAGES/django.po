@@ -78,7 +78,7 @@ msgstr "j/n"
 
 #: local_dates.py:21
 msgid "January_POS"
-msgstr "Ιανουαρία"
+msgstr "Ιανουαρίου"
 
 #: local_dates.py:21
 msgid "February_POS"
