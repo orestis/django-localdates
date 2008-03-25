@@ -6,9 +6,10 @@ language code:
 d F Y:
 {{ datenow|date:"d F Y" }} 
 <hr>
-This is not safe to use:<br>
+This is not safe to use, because different languages will use different formats:<br>
 d {Fp} Y:
-{{ datenow|ldate:"d {Fp} Y" }}
+{{ datenow|ldate:"d {Fp} Y" }}<br>
+<hr>
 Use these instead:<br> 
 <br>
 {FULL_DATE}
