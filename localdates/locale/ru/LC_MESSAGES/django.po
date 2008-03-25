@@ -1,0 +1,173 @@
+# Russian date translations for the django-localdates project.
+# Copyright (C) 2007-2008
+# This file is distributed under the same license as the django-localdates package.
+# Vladimir Volodin <zgollum@gmail.com>, 2008.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-02-27 16:22+0200\n"
+"PO-Revision-Date: 2008-02-27 17:17+0200\n"
+"Last-Translator: Vladimir Volodin <zgollum@gmail.com>\n"
+"Language-Team: Russian <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\local_dateformat.py:11
+msgid "FULL_DATE"
+msgstr "l, j {Fp}, Y"
+
+#: .\local_dateformat.py:12
+msgid "ABBR_DATE"
+msgstr "j {Fp}, Y"
+
+#: .\local_dateformat.py:13
+msgid "ABBR2_DATE"
+msgstr ""
+
+#: .\local_dateformat.py:14
+msgid "NUM_DATE"
+msgstr "n/j/Y"
+
+#: .\local_dateformat.py:16
+msgid "FULL_DATETIME"
+msgstr "l, j {Fp}, Y, P"
+
+#: .\local_dateformat.py:17
+msgid "ABBR_DATETIME"
+msgstr "j {Fp}, Y, P"
+
+#: .\local_dateformat.py:18
+msgid "ABBR2_DATETIME"
+msgstr ""
+
+#: .\local_dateformat.py:19
+msgid "NUM_DATETIME"
+msgstr "n/j/Y, P"
+
+#: .\local_dateformat.py:21
+msgid "FULL_TIME"
+msgstr "P"
+
+#: .\local_dateformat.py:23
+msgid "FULL_YEARMONTH"
+msgstr "F Y"
+
+#: .\local_dateformat.py:24
+msgid "ABBR_YEARMONTH"
+msgstr "M Y"
+
+#: .\local_dateformat.py:25
+msgid "NUM_YEARMONTH"
+msgstr "n/Y"
+
+#: .\local_dateformat.py:27
+msgid "FULL_MONTHDAY"
+msgstr "F j"
+
+#: .\local_dateformat.py:28
+msgid "ABBR_MONTHDAY"
+msgstr "M j"
+
+#: .\local_dateformat.py:29
+msgid "NUM_MONTHDAY"
+msgstr "n/j"
+
+#: .\local_dates.py:7
+msgid "January_POS"
+msgstr "января"
+
+#: .\local_dates.py:7
+msgid "February_POS"
+msgstr "февраля"
+
+#: .\local_dates.py:7
+msgid "March_POS"
+msgstr "марта"
+
+#: .\local_dates.py:7
+msgid "April_POS"
+msgstr "апреля"
+
+#: .\local_dates.py:8
+msgid "May_POS"
+msgstr "мая"
+
+#: .\local_dates.py:8
+msgid "June_POS"
+msgstr "июня"
+
+#: .\local_dates.py:8
+msgid "July_POS"
+msgstr "июля"
+
+#: .\local_dates.py:8
+msgid "August_POS"
+msgstr "августа"
+
+#: .\local_dates.py:9
+msgid "September_POS"
+msgstr "сентября"
+
+#: .\local_dates.py:9
+msgid "October_POS"
+msgstr "октября"
+
+#: .\local_dates.py:9
+msgid "November_POS"
+msgstr "ноября"
+
+#: .\local_dates.py:10
+msgid "December_POS"
+msgstr "декабря"
+
+#: .\local_dates.py:14
+msgid "January_DIR"
+msgstr "январе"
+
+#: .\local_dates.py:14
+msgid "February_DIR"
+msgstr "феврале"
+
+#: .\local_dates.py:14
+msgid "March_DIR"
+msgstr "марте"
+
+#: .\local_dates.py:14
+msgid "April_DIR"
+msgstr "апреле"
+
+#: .\local_dates.py:15
+msgid "May_DIR"
+msgstr "мае"
+
+#: .\local_dates.py:15
+msgid "June_DIR"
+msgstr "июне"
+
+#: .\local_dates.py:15
+msgid "July_DIR"
+msgstr "июле"
+
+#: .\local_dates.py:15
+msgid "August_DIR"
+msgstr "августе"
+
+#: .\local_dates.py:16
+msgid "September_DIR"
+msgstr "сентябре"
+
+#: .\local_dates.py:16
+msgid "October_DIR"
+msgstr "остабре"
+
+#: .\local_dates.py:16
+msgid "November_DIR"
+msgstr "ноябре"
+
+#: .\local_dates.py:17
+msgid "December_DIR"
+msgstr "декабре"
