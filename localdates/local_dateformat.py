@@ -82,6 +82,9 @@ class LocalFormatter(object):
         trans_pieces = local_trans_re.findall(formatstr)
         for piece in trans_pieces:
             result = _(piece[3:-2])
+            if result == piece[3:-2]:
+                result = u''.join([u"\\%s" % c for c in result])
+                
             formatstr = formatstr.replace(piece, result)
 
         # replace the standard strings with their expanded versions
@@ -94,14 +97,13 @@ class LocalFormatter(object):
         for piece in local_pieces:
             try:
                 result = unicode(getattr(self, piece[1:-1])())
+                result = u''.join([u"\\%s" % c for c in result])
                 formatstr = formatstr.replace(piece, result)
             except AttributeError:
                 # the current local date format doesn't handle this format
                 # we don't do anything
                 pass
-        
-        
-        
+                          
         # use the standard behavior for the rest
         return self._format(self, formatstr)
 

@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Finnish date translations for the django-localdates project.
+# Copyright (C) 2007-2008
+# This file is distributed under the same license as the django-localdates package.
+# Antti Kaihola <akaihol+django@ambitone.com>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-10-02 00:22+0300\n"
-"PO-Revision-Date: 2007-09-30 17:57+0300\n"
+"PO-Revision-Date: 2008-03-15 20:04+0200\n"
 "Last-Translator: Antti Kaihola <akaihol+django@ambitone.com>\n"
 "Language-Team: Finnish <Django-I18N@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -33,23 +33,23 @@ msgstr "j.n.Y"
 
 #: local_dateformat.py:16
 msgid "FULL_DATETIME"
-msgstr "l, j. {Fp} Y, P"
+msgstr "l, j. {Fp} Y, H:i"
 
 #: local_dateformat.py:17
 msgid "ABBR_DATETIME"
-msgstr "j. {Fp} Y, P"
+msgstr "j. {Fp} Y, H:i"
 
 #: local_dateformat.py:18
 msgid "ABBR2_DATETIME"
-msgstr "j. M Y, P"
+msgstr "j. M Y, H:i"
 
 #: local_dateformat.py:19
 msgid "NUM_DATETIME"
-msgstr "j.n.Y, P"
+msgstr "j.n.Y, H:i"
 
 #: local_dateformat.py:21
 msgid "FULL_TIME"
-msgstr "P"
+msgstr "H:i"
 
 #: local_dateformat.py:23
 msgid "FULL_YEARMONTH"
