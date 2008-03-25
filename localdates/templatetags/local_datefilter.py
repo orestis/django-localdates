@@ -4,7 +4,7 @@ from django.utils.translation import gettext, ngettext, get_language
 
 register = Library()
 
-from django.contrib.localdates.local_dateformat import format, time_format
+from localdates.local_dateformat import format, time_format
 
 ###################
 # DATES           #
