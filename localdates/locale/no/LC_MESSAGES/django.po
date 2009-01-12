@@ -1,0 +1,176 @@
+# Norwegian translations for django-localdates package.
+# This file is distributed under the same license as the
+# django-localdates package.
+# Steingrim Dovland <steingrd@ifi.uio.no>, 2009.
+# Steingrim Dovland <steingrd@ifi.uio.no>, 2009.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: django-localdates VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-12 20:16+0100\n"
+"PO-Revision-Date: 2009-01-12 20:50+0100\n"
+"Last-Translator: steingrd <(null)>\n"
+"Language-Team: English <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);"
+
+#: local_dateformat.py:13
+msgid "ABBR2_DATE"
+msgstr "j. N Y"
+
+#: local_dateformat.py:18
+msgid "ABBR2_DATETIME"
+msgstr "j. N Y, k\\l. H.i"
+
+#: local_dateformat.py:12
+msgid "ABBR_DATE"
+msgstr "j. F Y"
+
+#: local_dateformat.py:17
+msgid "ABBR_DATETIME"
+msgstr "j. F Y, k\\l. H.i"
+
+#: local_dateformat.py:28
+msgid "ABBR_MONTHDAY"
+msgstr "j. N"
+
+#: local_dateformat.py:24
+msgid "ABBR_YEARMONTH"
+msgstr "N Y"
+
+#: local_dates.py:14
+msgid "April_DIR"
+msgstr "april"
+
+#: local_dates.py:7
+msgid "April_H.iOS"
+msgstr "april"
+
+#: local_dates.py:15
+msgid "August_DIR"
+msgstr "august"
+
+#: local_dates.py:8
+msgid "August_POS"
+msgstr "august"
+
+#: local_dates.py:17
+msgid "December_DIR"
+msgstr "desember"
+
+#: local_dates.py:10
+msgid "December_POS"
+msgstr "desember"
+
+#: local_dateformat.py:11
+msgid "FULL_DATE"
+msgstr "l j. N Y"
+
+#: local_dateformat.py:16
+msgid "FULL_DATETIME"
+msgstr "l j. N Y, k\\l. H.i"
+
+#: local_dateformat.py:27
+msgid "FULL_MONTHDAY"
+msgstr "j. F"
+
+#: local_dateformat.py:21
+msgid "FULL_TIME"
+msgstr "H.i"
+
+#: local_dateformat.py:23
+msgid "FULL_YEARMONTH"
+msgstr "F Y"
+
+#: local_dates.py:14
+msgid "February_DIR"
+msgstr "februar"
+
+#: local_dates.py:7
+msgid "February_POS"
+msgstr "februar"
+
+#: local_dates.py:14
+msgid "January_DIR"
+msgstr "januar"
+
+#: local_dates.py:7
+msgid "January_POS"
+msgstr "januar"
+
+#: local_dates.py:15
+msgid "July_DIR"
+msgstr "juli"
+
+#: local_dates.py:8
+msgid "July_POS"
+msgstr "juli"
+
+#: local_dates.py:15
+msgid "June_DIR"
+msgstr "juni"
+
+#: local_dates.py:8
+msgid "June_POS"
+msgstr "juni"
+
+#: local_dates.py:14
+msgid "March_DIR"
+msgstr "mars"
+
+#: local_dates.py:7
+msgid "March_POS"
+msgstr "mars"
+
+#: local_dates.py:15
+msgid "May_DIR"
+msgstr "mai"
+
+#: local_dates.py:8
+msgid "May_POS"
+msgstr "mai"
+
+#: local_dateformat.py:14
+msgid "NUM_DATE"
+msgstr "d.m.Y"
+
+#: local_dateformat.py:19
+msgid "NUM_DATETIME"
+msgstr "d.m.Y, k\\l. H.i"
+
+#: local_dateformat.py:29
+msgid "NUM_MONTHDAY"
+msgstr "d/m"
+
+#: local_dateformat.py:25
+msgid "NUM_YEARMONTH"
+msgstr "Y/d"
+
+#: local_dates.py:16
+msgid "November_DIR"
+msgstr "november"
+
+#: local_dates.py:9
+msgid "November_POS"
+msgstr "november"
+
+#: local_dates.py:16
+msgid "October_DIR"
+msgstr "oktober"
+
+#: local_dates.py:9
+msgid "October_POS"
+msgstr "oktober"
+
+#: local_dates.py:16
+msgid "September_DIR"
+msgstr "september"
+
+#: local_dates.py:9
+msgid "September_POS"
+msgstr "september"
+
