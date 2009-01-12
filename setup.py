@@ -12,8 +12,8 @@ def find_files(directory, suffix_list):
 package_data = list(find_files('localdates', ['.po', '.mo', '.html']))
 
 kwargs = {
-    'name' : 'localdates',
-    'version' : 'dev',
+    'name' : 'django-localdates',
+    'version' : '0.2',
     'description' : 'An addition to django that allows better presentation of date strings in a local way.',
     'author' : 'Orestis Markou',
     'author_email' : 'orestis@orestis.gr',
@@ -21,7 +21,7 @@ kwargs = {
     'packages' : ['localdates',
                   'localdates.templatetags'],
     'package_data': { 'localdates': package_data},
-    'classifiers' : ['Development Status :: 4 - Beta',
+    'classifiers' : ['Development Status :: 5 - Production/Stable',
                      'Environment :: Web Environment',
                      'Intended Audience :: Developers',
                      'License :: OSI Approved :: BSD License',
