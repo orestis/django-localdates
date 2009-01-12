@@ -1,0 +1,4 @@
+*.swp
+*.pyc
+dist
+django_localdates.egg-info
